@@ -13,9 +13,10 @@ class TestEdge(unittest.TestCase):
 
     def test_edge_has_instance_variables(self):
         edge = Edge(ID, FROM_LAT, FROM_LON, TO_LAT, TO_LON)
+        coords = edge.coords
 
         self.assertSequenceEqual(
-            [edge.id, edge.from_lat, edge.from_lon, edge.to_lat, edge.to_lon],
+            [edge.id, coords[0][1], coords[0][0], coords[1][1], coords[1][0]],
             [ID, FROM_LAT, FROM_LON, TO_LAT, TO_LON]
         )
 

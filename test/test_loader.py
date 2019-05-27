@@ -22,9 +22,7 @@ class TestLoader(unittest.TestCase):
         self.assertEqual(len(loader.get_edges("../data/edges.csv")), 3)
 
     def test_load_specific_edge(self):
-        expected = Edge(0, 0.0, 0.0, 0.0, 1.0)
+        edge = Edge(0, 0.0, 0.0, 0.0, 1.0)
         actual = loader.get_edges("../data/edges.csv")[0]
-        self.assertSequenceEqual(
-            [expected.id, expected.from_lat, expected.from_lon, expected.to_lat, expected.to_lon],
-            [actual.id, actual.from_lat, actual.from_lon, actual.to_lat, actual.to_lon]
-        )
+
+        self.assertEqual(edge, actual)
