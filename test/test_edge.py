@@ -1,6 +1,6 @@
 import unittest
 
-from app.Edge import Edge
+from app.edge import Edge
 
 ID = 1
 FROM_LAT = 2.0

@@ -1,6 +1,6 @@
 import unittest
 
-from app.Waypoint import Waypoint
+from app.waypoint import Waypoint
 
 ID = 1
 LAT = 2.0
